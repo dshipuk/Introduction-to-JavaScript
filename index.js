@@ -133,22 +133,22 @@ function hungryDog(weight, age){
     
     console.log("puppy");
     if (age >= .2 && age  <= 0.4 ) {
-      console.log(weight * 0.10)
+      return console.log(weight * 0.10)
     } else if (age > 0.4 && age <= 0.7) {
-      console.log(weight * 0.05)
+      return console.log(weight * 0.05)
     } else if ( age > 0.7 && age <= 1) {
-      console.log(weight * 0.04)
+      return console.log(weight * 0.04)
     }
   } else {
     console.log("adult dog")
     if (weight <= 5) {
-      console.log(weight * 0.05)
+      return console.log(weight * 0.05)
     } else if (weight >= 6 && weight <= 10) {
-      console.log(weight * 0.04)
+      return console.log(weight * 0.04)
     } else if (weight >= 11 && weight <= 15) {
-      console.log(weight * 0.03)
+      return console.log(weight * 0.03)
     } else if (weight > 15) {
-      console.log(weight * 0.02)
+      return console.log(weight * 0.02)
     }
   }
 }
@@ -183,14 +183,14 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 let num = Math.random()
 function game(user, computer){
   if (user > 1) {
-    console.log("please choose a number between 0-1")
+    return console.log("please choose a number between 0-1")
   } else {
   if (user == computer) {
-    console.log("its a tie")
+    return console.log("its a tie")
   } else if (user > computer) {
-    console.log("you win!")
+    return console.log("you win!")
   } else {
-    console.log('you lose!')
+    return console.log('you lose!')
   }
 }
 }
@@ -245,8 +245,11 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(start){
   while (start > 0) {
-    console.log(`${start} bottles of soda on the wall, ${start} botles of soda, take one down pass it around ${--start} bottles of soda on the wall`)
-  }
+    console.log(`${start} bottles of soda on the wall, ${start} bottles of soda, take one down pass it around ${--start} bottles of soda on the wall`)
+    if (start == 0) {
+      return console.log(`${start} bottles of soda on the wall, ${start} bottles of soda, take one down pass it around ${start} bottles of soda on the wall`)
+    }
+  } 
 }
 
 annoyingSong(5);
@@ -269,15 +272,15 @@ Using the grade function below do the following:
 
 function grade(grade){
   if (grade >= 90) {
-    console.log("you got an A")
+    return console.log("you got an A")
   } else if (grade >= 80 && grade < 90) {
-    console.log("you got a B")
+    return console.log("you got a B")
   } else if (grade >= 70 && grade < 80) {
-    console.log("you got a C")
+    return console.log("you got a C")
   } else if (grade >= 60 && grade < 70) {
-    console.log("you got a D")
+    return console.log("you got a D")
   } else {
-    console.log("you got an F")
+    return console.log("you got an F")
   }
 }
 
@@ -303,7 +306,7 @@ function vowelCounter(letter) {
         total = total + 1
       }
     }
-    console.log("Vowels Found: " + total);
+    return console.log("Vowels Found: " + total);
   }
 vowelCounter("aaaeeeA");
 
