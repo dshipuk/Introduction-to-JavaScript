@@ -19,6 +19,14 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
+
+
+if (17 >= votingAge) {
+  console.log("true")
+} else {
+  console.log("false")
+}
 
 
 
@@ -32,8 +40,14 @@ Do the following:
 
    HINT: no function required
 */
+let a = 1;
+let b = 2;
 
 
+if (a == 1) {
+  a = b;
+  console.log(a)
+}
 
 
 
@@ -48,6 +62,8 @@ Do the following:
    HINT: look up the Number method
 */
 
+let stringOfInt = "1999"
+console.log(parseInt(stringOfInt))
 
 
 
@@ -76,9 +92,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
+
+console.log(dogYears(3))
+
 
 
 
@@ -109,9 +128,32 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if (age < 1) {
+    
+    console.log("puppy");
+    if (age >= .2 && age  <= 0.4 ) {
+      console.log(weight * 0.10)
+    } else if (age > 0.4 && age <= 0.7) {
+      console.log(weight * 0.05)
+    } else if ( age > 0.7 && age <= 1) {
+      console.log(weight * 0.04)
+    }
+  } else {
+    console.log("adult dog")
+    if (weight <= 5) {
+      console.log(weight * 0.05)
+    } else if (weight >= 6 && weight <= 10) {
+      console.log(weight * 0.04)
+    } else if (weight >= 11 && weight <= 15) {
+      console.log(weight * 0.03)
+    } else if (weight > 15) {
+      console.log(weight * 0.02)
+    }
+  }
 }
+
+console.log(hungryDog(15, 1))
 
 
 
@@ -138,9 +180,22 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let num = Math.random()
 function game(user, computer){
-  /*add your code here*/
+  if (user > 1) {
+    console.log("please choose a number between 0-1")
+  } else {
+  if (user == computer) {
+    console.log("its a tie")
+  } else if (user > computer) {
+    console.log("you win!")
+  } else {
+    console.log('you lose!')
+  }
 }
+}
+
+game(0, num)
 
 
 
@@ -155,9 +210,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(x){
+  return x / 1.609344
 }
+
+console.log("that is " + miles(3.5) + " miles")
 
 
 
@@ -169,10 +226,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(e){
+  return e * 30.48;
 }
 
+console.log("that is " + feet(32) + " cm")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -185,9 +243,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(start){
+  while (start > 0) {
+    console.log(`${start} bottles of soda on the wall, ${start} botles of soda, take one down pass it around ${--start} bottles of soda on the wall`)
+  }
 }
+
+annoyingSong(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -205,11 +267,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(grade){
+  if (grade >= 90) {
+    console.log("you got an A")
+  } else if (grade >= 80 && grade < 90) {
+    console.log("you got a B")
+  } else if (grade >= 70 && grade < 80) {
+    console.log("you got a C")
+  } else if (grade >= 60 && grade < 70) {
+    console.log("you got a D")
+  } else {
+    console.log("you got an F")
+  }
 }
 
-
+grade(72210)
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -223,11 +295,19 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
-
+const vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u", "Y", "y", "W", "w"]
+let total = 0;
+function vowelCounter(letter) {
+  for (let v of letter) {
+    for (let i = 0; i < v.length; i++) {
+      if (vowels.includes(v)) {
+        total = total + 1
+      }
+      }
+    }
+    console.log("Vowels Found: " + total);
+  }
+vowelCounter("Hello");
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
