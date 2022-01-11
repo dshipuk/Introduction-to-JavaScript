@@ -130,25 +130,24 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 
 function hungryDog(weight, age){
   if (age < 1) {
-    
     console.log("puppy");
     if (age >= .2 && age  <= 0.4 ) {
-      return console.log(weight * 0.10)
+      return weight * 0.10
     } else if (age > 0.4 && age <= 0.7) {
-      return console.log(weight * 0.05)
+      return weight * 0.05
     } else if ( age > 0.7 && age <= 1) {
-      return console.log(weight * 0.04)
+      return weight * 0.04
     }
   } else {
     console.log("adult dog")
     if (weight <= 5) {
-      return console.log(weight * 0.05)
+      return weight * 0.05
     } else if (weight >= 6 && weight <= 10) {
-      return console.log(weight * 0.04)
+      return weight * 0.04
     } else if (weight >= 11 && weight <= 15) {
-      return console.log(weight * 0.03)
+      return weight * 0.03
     } else if (weight > 15) {
-      return console.log(weight * 0.02)
+      return weight * 0.02
     }
   }
 }
@@ -183,14 +182,14 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 let num = Math.random()
 function game(user, computer){
   if (user > 1) {
-    return console.log("please choose a number between 0-1")
+    return "please choose a number between 0-1"
   } else {
   if (user == computer) {
-    return console.log("its a tie")
+    return "it's a tie"
   } else if (user > computer) {
-    return console.log("you win!")
+    return "you win!"
   } else {
-    return console.log('you lose!')
+    return 'you lose!'
   }
 }
 }
@@ -211,7 +210,7 @@ Using the miles function below do the following:
 */
 
 function miles(x){
-  return x / 1.609344
+  return x * 0.621371
 }
 
 console.log("that is " + miles(3.5) + " miles")
@@ -227,7 +226,7 @@ Using the feet function below do the following:
 */
 
 function feet(e){
-  return e * 30.48;
+  return e / 30.48;
 }
 
 console.log("that is " + feet(32) + " cm")
@@ -244,10 +243,10 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(start){
-  while (start > 0) {
+  while (start >= 0) {
     console.log(`${start} bottles of soda on the wall, ${start} bottles of soda, take one down pass it around ${--start} bottles of soda on the wall`)
-    if (start == 0) {
-      return console.log(`${start} bottles of soda on the wall, ${start} bottles of soda, take one down pass it around ${start} bottles of soda on the wall`)
+    if (start == 1) {
+      return `${5} bottles of soda on the wall, ${5} bottles of soda, take one down pass it around ${4} bottles of soda on the wall`
     }
   } 
 }
@@ -272,19 +271,19 @@ Using the grade function below do the following:
 
 function grade(grade){
   if (grade >= 90) {
-    return console.log("you got an A")
+    return "you got an A"
   } else if (grade >= 80 && grade < 90) {
-    return console.log("you got a B")
+    return "you got a B"
   } else if (grade >= 70 && grade < 80) {
-    return console.log("you got a C")
+    return "you got a C"
   } else if (grade >= 60 && grade < 70) {
-    return console.log("you got a D")
+    return "you got a D"
   } else {
-    return console.log("you got an F")
+    return "you got an F"
   }
 }
 
-grade(72210)
+grade(20)
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
