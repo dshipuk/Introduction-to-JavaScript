@@ -299,15 +299,13 @@ const vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u", "Y", "y", "W",
 let total = 0;
 function vowelCounter(letter) {
   for (let v of letter) {
-    for (let i = 0; i < v.length; i++) {
       if (vowels.includes(v)) {
         total = total + 1
-      }
       }
     }
     console.log("Vowels Found: " + total);
   }
-vowelCounter("Hello");
+vowelCounter("aaaeeeA");
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
